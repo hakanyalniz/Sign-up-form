@@ -1,4 +1,9 @@
 :root {
+  --dark-blue: #1f00ff;
+  --royal-purple: #4c33ff;
+  --dark-royal-purple: #0d0174;
+  --pitch-dark-blue: #06003c;
+  --dark-yellow: #f5cc3d;
   /* Adding fallback fonts like this is good incase the user can't reach the font for one reason or another 
     Also, using a variable like this is useful since the fallback fonts can get quite long */
   --system-ui: "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
@@ -9,4 +14,44 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-family: var(--system-ui);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  /* background-color: var(--pitch-dark-blue);
+  background-image: url(../images/hero-images/john-zhou.jpg);
+  background-image: url(../images/hero-images/andrea-de-santis.jpg);
+  background-image: url(../images/hero-images/clay-banks.jpg);
+  background-image: url(../images/hero-images/david-emrich.jpg);
+  background-image: url(../images/hero-images/eugene-chystiakov.jpg);
+  background-image: url(../images/hero-images/masahiro-miyagi.jpg); */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 50px;
+  border-radius: 30px;
+}
+
+/* Preloads the images */
+.login-container::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1; /* hide images */
+  content: url(../images/hero-images/john-zhou.jpg)
+    url(../images/hero-images/andrea-de-santis.jpg)
+    url(../images/hero-images/clay-banks.jpg)
+    url(../images/hero-images/david-emrich.jpg)
+    url(../images/hero-images/eugene-chystiakov.jpg)
+    url(../images/hero-images/masahiro-miyagi.jpg); /* load images */
 }
