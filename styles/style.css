@@ -1,0 +1,12 @@
+:root {
+  /* Adding fallback fonts like this is good incase the user can't reach the font for one reason or another 
+    Also, using a variable like this is useful since the fallback fonts can get quite long */
+  --system-ui: "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
