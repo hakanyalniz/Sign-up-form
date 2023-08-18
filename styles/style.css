@@ -31,7 +31,9 @@ html {
 }
 
 .login-form {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
   padding: 50px;
   border-radius: 30px;
   backdrop-filter: blur(3px);
@@ -44,13 +46,12 @@ html {
   height: 0;
   overflow: hidden;
   z-index: -1; /* hide images */
+  /* load images */
   content: url(../images/hero-images/john-zhou.jpg)
-    url(../images/hero-images/andrea-de-santis.jpg)
     url(../images/hero-images/clay-banks.jpg)
-    url(../images/hero-images/david-emrich.jpg)
-    url(../images/hero-images/eugene-chystiakov.jpg)
-    url(../images/hero-images/masahiro-miyagi.jpg); /* load images */
-}
+    url(../images/hero-images/eugene-chystiakov.jpg) 
+    url(../images/hero-images/valeriia-neganova.jpg)
+} 
 
 #all_slides {
   /* position: relative;
@@ -74,46 +75,36 @@ html {
   transition: opacity 2s;
 }
 
+/* Only the active is shown, the rest is hidden by default */
 .active {
   opacity: 1;
   z-index: 2;
 }
 
-.slide:nth-of-type(1) {
-  background-image: url("../images/hero-images/andrea-de-santis.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
+/* Add the images */
 
-.slide:nth-of-type(2) {
+.slide:nth-of-type(1) {
   background-image: url("../images/hero-images/clay-banks.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.slide:nth-of-type(3) {
+.slide:nth-of-type(2) {
   background-image: url("../images/hero-images/eugene-chystiakov.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.slide:nth-of-type(4) {
+.slide:nth-of-type(3) {
   background-image: url("../images/hero-images/john-zhou.jpg");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-.slide:nth-of-type(5) {
-  background-image: url("../images/hero-images/masahiro-miyagi.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-.slide:nth-of-type(6) {
+.slide:nth-of-type(4) {
   background-image: url("../images/hero-images/valeriia-neganova.jpg");
   background-size: cover;
   background-position: 50% 50%;
