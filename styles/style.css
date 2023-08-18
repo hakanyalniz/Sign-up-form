@@ -19,6 +19,7 @@
 html {
   font-family: var(--system-ui);
   font-size: clamp(1rem, 2vw, 1.3rem);
+  background-color: var(--pitch-dark-blue);
 }
 
 .login-container {
