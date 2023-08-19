@@ -37,7 +37,7 @@ html {
   padding: 50px;
   border-radius: 30px;
   backdrop-filter: blur(3px);
-  width: max(40%, 300px);
+  width: max(20%, 300px);
 }
 
 /* These are the ones that give the fancy coloring and the transition of text to top */
@@ -242,9 +242,17 @@ input:-webkit-autofill:active {
 
 .footer p {
   font-size: 0.8rem;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
   border-radius: 10px;
   padding: 3px 5px;
+
+  transition: background-color 0.5s;
+}
+
+.footer p:hover {
+  background-color: rgba(58, 61, 247, 0.3);
+  color: white;
 }
 
 .footer img {
